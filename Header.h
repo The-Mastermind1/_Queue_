@@ -8,6 +8,7 @@
 #include<utility>
 #include<initializer_list>
 #include<functional>
+#if __cplusplus > 202002L
 _PANAGIOTIS_BEGIN
 template<typename _Ty>
 class Queue {
@@ -406,3 +407,4 @@ public:
 
 };
 _PANAGIOTIS_END
+#endif
