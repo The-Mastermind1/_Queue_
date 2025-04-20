@@ -15,8 +15,7 @@ private:
 	public:
 		_Ty data;
 		Queue_Node* next;
-		template<typename T=_Ty>
-		requires(std::is_nothrow_default_constructible_v<_Ty>)
+		
 		Queue_Node()noexcept :data{},next{nullptr}
 		{
 
