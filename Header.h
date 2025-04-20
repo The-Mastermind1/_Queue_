@@ -370,7 +370,7 @@ public:
 	~Queue()noexcept 
 	{
 		for (std::size_t i = 0; i < count; i++) {
-			std::cout << "hello\n";
+			
 			Queue_Node* ptr = head;
 			head = head->next;
 			delete ptr;
