@@ -379,30 +379,7 @@ public:
 		count = 0;
 		head = tail = nullptr;
 	}
-	template<class ..._Valty>
-	bool emplace(_Valty&&... _Val) {
-		
-		Queue_Node* ptr = new (std::nothrow)Queue_Node(std::forward<_Valty>(_Val)...);
-		if (count != 0) {
-
-			if (ptr != nullptr) {
-				tail->next = ptr;
-				tail = tail->next;
-				count++;
-				return true;
-			}
-
-
-		}
-		else {
-			if (ptr != nullptr) {
-				head = tail = ptr;
-				count++;
-				return true;
-			}
-		}
-		return false;
-	}
+	
 
 
 };
