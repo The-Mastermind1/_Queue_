@@ -379,8 +379,43 @@ public:
 		count = 0;
 		head = tail = nullptr;
 	}
-	
+	void reverse() noexcept 
+	{
+		if (count > 1) {
+			Queue_Node* ptr1 = head;
+			Queue_Node* ptr2 = head->next;
+			Queue_Node* newHead = nullptr;
+			std::size_t count1 = 0;
+			while (ptr2 != nullptr) {
+				if (count1 == 0) {
+					count1++;
+					Queue_Node* ptr = ptr2->next;
+					ptr2->next = ptr1;
+					ptr1->next = ptr;
+					newHead = ptr2;
+					ptr2 = ptr1->next;
+				}
+				else {
+					Queue_Node* ptr = ptr2->next;
+					ptr2->next = newHead;
+					ptr1->next = ptr;
+					newHead = ptr2;
+					ptr2 = ptr1->next;
+				}
 
+
+
+			}
+			head = newHead;
+			tail = newHead;
+			if (tail == nullptr)return;
+			for (std::size_t i = 0; i < count-1; i++) {
+				tail = tail->next;
+			}
+			
+		}
+	}
+	
 
 };
 _PANAGIOTIS_END
