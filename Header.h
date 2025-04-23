@@ -415,6 +415,9 @@ public:
 			
 		}
 	}
+	void clear()noexcept{
+		this->~Queue();
+	}
 	
 
 };
