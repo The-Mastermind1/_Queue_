@@ -210,14 +210,14 @@ public:
 		 if (count == 0) {
 			 throw tried_to_access_an_empty_queue_{ "tried to access from an empty queue " };
 		 }
-		 return head->data;
+		 return std::move(head->data);
 
 	}
 	_NODISCARD _Ty front()const&& {
 		 if (count == 0) {
 			 throw tried_to_access_an_empty_queue_{ "tried to access from an empty queue " };
 		 }
-		 return head->data;
+		 return std::move(head->data);
 
 	}
 
