@@ -342,6 +342,7 @@ public:
 						delete ptr;
 						count--;
 					}
+					tail->next=nullptr;
 					return *this;
 
 				}
