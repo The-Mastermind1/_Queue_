@@ -11,9 +11,9 @@
 #if __cplusplus > 202002L
 _PANAGIOTIS_BEGIN
 template<typename _Ty>
-class Queue {
+class Queue final {
 private:
-	class Queue_Node {
+	class Queue_Node final {
 	public:
 		_Ty data;
 		Queue_Node* next;
