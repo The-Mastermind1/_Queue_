@@ -1,3 +1,4 @@
+
 #pragma once
 #include<exception>
 #include<string>
@@ -9,7 +10,7 @@
 
 _PANAGIOTIS_BEGIN
 
-class pop_from_an_empty_queue_:public std::exception 
+class pop_from_an_empty_queue_ :public std::exception
 {
 private:
     std::string errorMessage; // To store the error message
