@@ -307,6 +307,15 @@ public:
 			ptr = ptr->next;
 		}
 	}
+	_NODISCARD std::size_t count_items()const noexcept {
+		queue_node* ptr{ head };
+		std::size_t node_count{ 0 };
+		while (ptr != nullptr) {
+			node_count++;
+			ptr = ptr->next;
+		}
+		return node_count;
+	}
 
 };
 _PANAGIOTIS_END
