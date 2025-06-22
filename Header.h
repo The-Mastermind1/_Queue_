@@ -6,6 +6,7 @@
 #include<utility>
 #include<functional>
 #include<new>
+#include<cstdlib>
 #include"Macros.h"
 
 _PANAGIOTIS_BEGIN
