@@ -170,14 +170,14 @@ public:
 	void pop() {
 		pop_node();
 	}
-	_NODISCARD _Ty back()&& {
+	_NODISCARD _Ty&& back()&& {
 		if (count == 0) {
 			throw tried_to_access_an_empty_queue_{ "tried to access from an empty queue " };
 		}
 		return std::move(tail->data);
 
 	}
-	_NODISCARD const _Ty back()const&& {
+	_NODISCARD const _Ty&& back()const&& {
 		if (count == 0) {
 			throw tried_to_access_an_empty_queue_{ "tried to access from an empty queue " };
 		}
@@ -212,14 +212,14 @@ public:
 		return head->data;
 
 	}
-	_NODISCARD _Ty front()&& {
+	_NODISCARD _Ty&& front()&& {
 		if (count == 0) {
 			throw tried_to_access_an_empty_queue_{ "tried to access from an empty queue " };
 		}
 		return std::move(head->data);
 
 	}
-	_NODISCARD _Ty front()const&& {
+	_NODISCARD const _Ty&& front()const&& {
 		if (count == 0) {
 			throw tried_to_access_an_empty_queue_{ "tried to access from an empty queue " };
 		}
